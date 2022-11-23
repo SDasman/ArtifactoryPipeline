@@ -27,9 +27,9 @@ pipeline {
 	    stage('Pushing Docker Image to Artifactory') {
             steps {
                 script {
-                    docker.withRegistry('URL', 'docker_credential') {
-                        docker.image("petclinic:${TAG}").push()
-                        docker.image("petclinic:${TAG}").push("latest")
+                    docker.withRegistry('https://hub.docker.com/r/getcarrier/petclinic', 'docker_credential') {
+                        docker.image("getcarrier/petclinic:${TAG}").push()
+                        docker.image("getcarrier/petclinic:${TAG}").push("latest")
                     }
                 }
             }
@@ -38,7 +38,7 @@ pipeline {
             steps {
                 sh "docker stop petclinic | true"
                 sh "docker rm petclinic | true"
-                sh "docker run --name petclinic -d -p 9004:8080 petclinic:${TAG}"
+                sh "docker run --name petclinic -d -p 8082:8082 getcarrier/petclinic:${TAG}"
             }
         }
     }
