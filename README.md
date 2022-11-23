@@ -7,8 +7,11 @@ Artifactory Trigger launches Jenkinsfile into Jenkins Server which pulls Java pr
 
 ### Technology Stack Choices:
 Artifactory - Stores key pieces of data safely from public: JenkinsFile, DockerFile, Image and credentials.
+
 Maven - Builds, Compiles, and Tests Code.
+
 Docker - Container Build and Push
+
 Jenkins - Orchestrator with Build Trigger and Post Build Steps.
 
 #### Command to run docker container:
