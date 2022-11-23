@@ -5,7 +5,7 @@
 #### Desired State: 
 Artifactory Trigger launches Jenkinsfile into Jenkins Server which pulls Java project from Github, Compiles, Tests, and Builds all with Maven. Then the Dockerfile is pulled from Artifactory which builds a runnable image to be published back to Artifactory.
 
-### Reasons for each technology:
+### Technology Stack Choices:
 Artifactory - Stores key pieces of data safely from public: JenkinsFile, DockerFile, Image and credentials.
 Maven - Builds, Compiles, and Tests Code.
 Docker - Container Build and Push
