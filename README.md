@@ -10,4 +10,7 @@ Maven - Builds, Compiles, and Tests Code.
 Docker - Container Build and Push
 Jenkins - Orchestrator with Build Trigger and Post Build Steps.
 
+
+docker run -p 8082:8082 getcarrier/petclinic
+
 #### Enjoy!
